@@ -82,7 +82,56 @@ public class Lab {
 			System.out.println("There are no cookies to give out...");
 		} else if (numberOfChildren <= 0) {
 			System.out.println("All " + numberOfCookies + " cookies are for you... >:)");
+		} else {
+			System.out.println("Please enter valid numbers");
 		}
+		
+		// Part 2
+		
+		// create a variable called loyaltyMemberStatus and assign the value to "SILVER"
+		String loyaltyMemberStatus = "SILVER";
+		System.out.print("what is your membership status ");
+		loyaltyMemberStatus = kb.next();
+		
+		// create a variable called loyaltyMemberDiscount and assign the value to 0.0
+		double loyaltyMemberDiscount = 0.0;
+		
+		//using a switch, set the value of loyaltyMemberDiscount based on the following loyaltyMemberStatus scale
+		// "SILVER" is 0.10, "GOLD" is 0.15, and "PLATINUM" is 0.25
+		switch (loyaltyMemberStatus) {
+			case "SILVER" :
+				loyaltyMemberDiscount = 0.10;
+				System.out.println("Member Status: SILVER - 10% discount");
+				break;
+			case "GOLD" :
+				loyaltyMemberDiscount = 0.15;
+				System.out.println("Member Status: GOLD - 15% discount");
+				break;
+			case "PLATINUM" :
+				loyaltyMemberDiscount = 0.25;
+				System.out.println("Member Status: PLATINUM - 25% discount");
+				break;
+		}
+		
+		// create a variable called billTotal and assign a value
+		double billTotal = 200.67;
+		System.out.print("What is your bill total? ");
+		billTotal = kb.nextDouble();
+		
+		// create a variable called adjustedBillTotal and assign it the billTotal minus the loyaltyMemberDiscount % of billTotal
+		double adjustedBillTotal = billTotal - (billTotal * loyaltyMemberDiscount);
+		System.out.println("Your discounted total is: $" + adjustedBillTotal);
+		
+		// if the adjustedBillTotal is greater than 500, upgrade loyaltyMemberStatus from silv > gold or gold > plat
+		if (adjustedBillTotal > 500) {
+			if (loyaltyMemberStatus.equalsIgnoreCase("silver")) {
+				loyaltyMemberStatus = "GOLD";
+			} else if (loyaltyMemberStatus.equalsIgnoreCase("gold")) {
+				loyaltyMemberStatus = "PLATNUM";
+			}
+			System.out.println("Congratulations! Your membership has been upgraded to " + loyaltyMemberStatus + ".");
+		}
+		
 	}
 
 }
