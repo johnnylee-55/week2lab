@@ -16,11 +16,13 @@ public class Lab {
 		// and "You cannot drive" otherwise
 		// change the value of age and rerun to see the result
 		
-//		if (age >= 16) {
-//			System.out.println("You can drive");
-//		} else {
-//			System.out.println("You cannot drive");
-//		}
+		/*
+		 * if (age >= 16) { 
+		 * 	System.out.println("You can drive");
+		 * } else {
+		 * 	System.out.println("You cannot drive"); 
+		 * }
+		 */
 		
 		// add a new variable called hasLicense before the conditional
 		// change the boolean expression in the conditional to additionally include hasLicense = true
@@ -132,6 +134,63 @@ public class Lab {
 			System.out.println("Congratulations! Your membership has been upgraded to " + loyaltyMemberStatus + ".");
 		}
 		
+		// create two variables, username and password	
+		String username = "Username";
+		String password = "Password";
+		
+		System.out.print("Please enter your username:");
+		String attemptedUsername = kb.next();
+		System.out.print("Please enter your password:");
+		String attemptedPassword = kb.next();
+		
+		// create a conditional that prints "login successful" if the username is "Username" and password is "Password"
+		if (attemptedUsername.equals(username) && attemptedPassword.equals(password)) {
+			System.out.println("login successful");
+		} else {
+		// otherwise, print "access denied"
+			System.out.println("access denied");
+		}
+		
+		// write a for loop that prints each number from 0 to 9
+		
+		for (int i = 0; i <= 9; i++) {
+			System.out.print(i + " ");
+		}
+		System.out.println();
+		
+		// write a for loop that prints each number from 10 to 0 backwards
+		
+		for (int j = 10; j >= 0; j--) {
+			System.out.print(j + " ");
+		}
+		System.out.println();
+		
+		// write a for loop that prints every other number from 0 to 100
+		
+		for (int k = 0; k <= 100; k += 2) {
+			System.out.print(k + " ");
+		}
+		System.out.println();
+		
+		// write a for loop that iterates from 0 to 100 and prints "EVEN" if the number is even and "ODD" if odd
+		
+		for (int counter = 0; counter <= 100; counter++) {
+			if (counter % 2 == 0) {
+				System.out.print("EVEN ");
+			} else {
+				System.out.print("ODD ");
+			}
+		}
+		System.out.println();
+		
+		// write a while loop that starts at 100 and iterates backwards by 1 until 0
+		// divide each number by 3 until and print the remainder to the console
+		
+		int i = 100;
+		while (i >= 0) {
+			System.out.println(i + " " + i % 3);
+			i--;
+		}
 	}
 
 }
