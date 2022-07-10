@@ -150,6 +150,8 @@ public class Lab {
 		// otherwise, print "access denied"
 			System.out.println("access denied");
 		}
+		// closing scanner prevents memory leaks
+		kb.close();
 		
 		// write a for loop that prints each number from 0 to 9
 		
@@ -191,6 +193,8 @@ public class Lab {
 			System.out.println(i + " " + i % 3);
 			i--;
 		}
+
+		System.out.println("Why does \"x:\" appear there");
 	}
 
 }
