@@ -193,8 +193,7 @@ public class Lab {
 			System.out.println(i + " " + i % 3);
 			i--;
 		}
-
-		System.out.println("Why does \"x:\" appear there");
+		
 	}
 
 }
